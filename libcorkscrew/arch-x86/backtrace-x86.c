@@ -18,6 +18,12 @@
  * Backtracing functions for x86.
  */
 
+#ifndef __BIONIC__
+// glibc has its own renaming of the Linux kernel's structures.
+#define _GNU_SOURCE // For REG_EBP, REG_ESP, and REG_EIP.
+#include <ucontext.h>
+#endif
+
 #define LOG_TAG "Corkscrew"
 //#define LOG_NDEBUG 0
 
