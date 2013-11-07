@@ -81,8 +81,6 @@ static unsigned revision = 0;
 static char qemu[32];
 static char battchg_pause[32];
 
-static int selinux_enabled = 1;
-
 static struct action *cur_action = NULL;
 static struct command *cur_command = NULL;
 static struct listnode *command_queue = NULL;
