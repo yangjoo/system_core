@@ -89,7 +89,7 @@ typedef struct ucontext {
 #else
 
 // glibc has its own renaming of the Linux kernel's structures.
-#define __USE_GNU // For REG_EBP, REG_ESP, and REG_EIP.
+#define _GNU_SOURCE // For REG_EBP, REG_ESP, and REG_EIP.
 #include <ucontext.h>
 
 #endif
